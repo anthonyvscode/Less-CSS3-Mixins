@@ -1,0 +1,154 @@
+/*
+	Developed by anthonyvscode.com
+	This solution is to be used in less css and less js: http://lesscss.org/
+*/
+ 
+/*Border Radius Functions*/
+.border_radius(@radius:10px)
+{
+    -webkit-border-radius:@radius;
+    -moz-border-radius:@radius;
+    border-radius:@radius;
+}
+ 
+.border_radius_top(@radius:10px)
+{
+    -webkit-border-top-left-radius: @radius;
+    -webkit-border-top-right-radius: @radius;
+    -moz-border-radius-topleft: @radius;
+    -moz-border-radius-topright: @radius;
+    border-top-left-radius: @radius;
+    border-top-right-radius: @radius;
+}
+ 
+.border_radius_bottom(@radius:10px)
+{
+    -webkit-border-bottom-left-radius: @radius;
+    -webkit-border-bottom-right-radius: @radius;
+    -moz-border-radius-bottomleft: @radius;
+    -moz-border-radius-bottomright: @radius;
+    border-bottom-left-radius: @radius;
+    border-bottom-right-radius: @radius;
+}
+ 
+.border_radius_left(@radius:10px)
+{
+    -webkit-border-top-left-radius: @radius;
+    -webkit-border-bottom-left-radius: @radius;
+    -moz-border-radius-topleft: @radius;
+    -moz-border-radius-bottomleft: @radius;
+    border-top-left-radius: @radius;
+    border-bottom-left-radius: @radius;
+}
+ 
+.border_radius_right(@radius:10px)
+{
+    -webkit-border-top-right-radius: @radius;
+    -webkit-border-bottom-right-radius: @radius;
+    -moz-border-radius-topright: @radius;
+    -moz-border-radius-bottomright: @radius;
+    border-top-right-radius: @radius;
+    border-bottom-right-radius: @radius;
+}
+ 
+.border_radius_top_left(@radius:10px)
+{
+    -webkit-border-top-left-radius: @radius;
+    -moz-border-radius-topleft: @radius;
+    border-top-left-radius: @radius;
+}
+ 
+.border_radius_top_right(@radius:10px)
+{
+    -webkit-border-top-right-radius: @radius;
+    -moz-border-radius-topright: @radius;
+    border-top-right-radius: @radius;
+}
+ 
+.border_radius_bottom_left(@radius:10px)
+{
+    -webkit-border-bottom-left-radius: @radius;
+    -moz-border-radius-bottomleft: @radius;
+    border-bottom-left-radius: @radius;
+}
+.border_radius_bottom_right(@radius:10px)
+{
+    -webkit-border-bottom-right-radius: @radius;
+    -moz-border-radius-bottomright: @radius;
+    border-bottom-right-radius: @radius;
+}
+ 
+/*Shadows*/
+.box_shadow(@shadow_x:3px, @shadow_y:3px, @shadow_rad:3px, @shadow_color:#888)
+{
+    box-shadow: @shadow_x @shadow_y @shadow_rad @shadow_color;
+    -webkit-box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_color;
+    -moz-box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_color;
+}
+ 
+.text_shadow(@shadow_color:#fff)
+{
+    text-shadow:0 1px 0 @shadow_col;
+}
+ 
+.opacity(@op:100)
+{
+    filter:alpha(opacity=@op);
+    -moz-opacity:@op/100;
+    -khtml-opacity:@op/100;
+    opacity:@op/100;
+}
+ 
+.background_gradient(@from:#000, @to:#EEE)
+{
+    background: @from;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+    background-image: -moz-linear-gradient(top, @from, @to);
+    filter: formatstring("progid:DXImageTransform.Microsoft.gradient(startColorstr='{0}', endColorstr='{1}')", @from, @to); /* IE6,IE7 */
+    -ms-filter: formatstring("{2}progid:DXImageTransform.Microsoft.gradient(startColorStr='{0}', EndColorStr='{1}'){2}", @from, @to, '"'); /* IE8 */
+}
+ 
+.transition(@range: all, @time: 1s, @ease: ease-in-out)
+{
+    -moz-transition: @range @time @ease;
+    -webkit-transition: @range @time @ease;
+    -o-transition: @range @time @ease;
+    transition: @range @time @ease;
+}
+ 
+/*Transformations*/
+.skew(@angle_x:35, @angle_y:0)
+{
+    -webkit-transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
+    -moz-transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
+    -o-transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
+    -ms-transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
+    transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
+}
+ 
+.scale(@scale_x: 1)
+{
+    -webkit-transform: scale(@scale_x);
+    -moz-transform: scale(@scale_x);
+    -o-transform: scale(@scale_x);
+    -ms-transform: scale(@scale_x);
+    transform: scale(@scale_x);
+}
+ 
+.rotate(@angle:35)
+{
+    -webkit-transform: rotate(formatstring("{0}deg", @deg));
+    -moz-transform: rotate(formatstring("{0}deg", @deg));
+    -o-transform: rotate(formatstring("{0}deg", @deg));
+    -ms-transform: rotate(formatstring("{0}deg", @deg));
+    transform: rotate(formatstring("{0}deg", @deg));
+}
+ 
+.translate(@move_x: 10px, @move_y: 10px)
+{
+    -webkit-transform: translate(@move_x, @move_y);
+    -moz-transform: translate(@move_x, @move_y);
+    -o-transform: translate(@move_x, @move_y);
+    -ms-transform:translate(@move_x, @move_y);
+    transform: translate(@move_x, @move_y);
+}
