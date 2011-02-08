@@ -20,7 +20,7 @@
 	-moz-border-radius:@radius_top_left @radius_top_right @radius_bottom_right @radius_bottom_left;
 	border-radius:@radius_top_left @radius_top_right @radius_bottom_right @radius_bottom_left;
 }
- 
+
 /*Shadows*/
 .box_shadow(@shadow_x:3px, @shadow_y:3px, @shadow_rad:3px, @shadow_color:#888)
 {
@@ -28,12 +28,12 @@
 	-webkit-box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_color;
 	-moz-box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_color;
 }
- 
+
 .text_shadow(@shadow_color:#fff)
 {
 	text-shadow:0 1px 0 @shadow_col;
 }
- 
+
 .opacity(@op:100)
 {
 	filter:alpha(opacity=@op);
@@ -41,7 +41,7 @@
 	-khtml-opacity:@op/100;
 	opacity:@op/100;
 }
- 
+
 .background_gradient(@from:#000, @to:#EEE)
 {
 	background: @from;
@@ -50,48 +50,50 @@
 	filter: formatstring("progid:DXImageTransform.Microsoft.gradient(startColorstr='{0}', endColorstr='{1}')", @from, @to); /* IE6,IE7 */
 	-ms-filter: formatstring("\"progid:DXImageTransform.Microsoft.gradient(startColorStr='{0}', EndColorStr='{1}')\"", @from, @to); /* IE8 */
 }
- 
+
 .transition(@range: all, @time: 1s, @ease: ease-in-out)
 {
-    -moz-transition: @range @time @ease;
-    -webkit-transition: @range @time @ease;
-    -o-transition: @range @time @ease;
-    transition: @range @time @ease;
+	-moz-transition: @range @time @ease;
+	-webkit-transition: @range @time @ease;
+	-o-transition: @range @time @ease;
+	transition: @range @time @ease;
 }
- 
+
 /*Transformations*/
 .skew(@angle_x:35, @angle_y:0)
 {
-    -webkit-transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
-    -moz-transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
-    -o-transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
-    -ms-transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
-    transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
+	-webkit-transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
+	-moz-transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
+	-o-transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
+	-ms-transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
+	transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
 }
- 
+
 .scale(@scale_x: 1)
 {
-    -webkit-transform: scale(@scale_x);
-    -moz-transform: scale(@scale_x);
-    -o-transform: scale(@scale_x);
-    -ms-transform: scale(@scale_x);
-    transform: scale(@scale_x);
+	-webkit-transform: scale(@scale_x);
+	-moz-transform: scale(@scale_x);
+	-o-transform: scale(@scale_x);
+	-ms-transform: scale(@scale_x);
+	transform: scale(@scale_x);
 }
- 
+
 .rotate(@angle:35)
 {
-    -webkit-transform: rotate(formatstring("{0}deg", @deg));
-    -moz-transform: rotate(formatstring("{0}deg", @deg));
-    -o-transform: rotate(formatstring("{0}deg", @deg));
-    -ms-transform: rotate(formatstring("{0}deg", @deg));
-    transform: rotate(formatstring("{0}deg", @deg));
+	-webkit-transform: rotate(formatstring("{0}deg", @deg));
+	-moz-transform: rotate(formatstring("{0}deg", @deg));
+	-o-transform: rotate(formatstring("{0}deg", @deg));
+	-ms-transform: rotate(formatstring("{0}deg", @deg));
+	transform: rotate(formatstring("{0}deg", @deg));
 }
- 
+
 .translate(@move_x: 10px, @move_y: 10px)
 {
-    -webkit-transform: translate(@move_x, @move_y);
-    -moz-transform: translate(@move_x, @move_y);
-    -o-transform: translate(@move_x, @move_y);
-    -ms-transform:translate(@move_x, @move_y);
-    transform: translate(@move_x, @move_y);
+	-webkit-transform: translate(@move_x, @move_y);
+	-moz-transform: translate(@move_x, @move_y);
+	-o-transform: translate(@move_x, @move_y);
+	-ms-transform:translate(@move_x, @move_y);
+	transform: translate(@move_x, @move_y);
 }
+	
+	
