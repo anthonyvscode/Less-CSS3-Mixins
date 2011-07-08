@@ -44,11 +44,15 @@
 
 .background_gradient(@from:#000, @to:#EEE)
 {
-	background: @from;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
-	background-image: -moz-linear-gradient(top, @from, @to);
+	background: @from; /* Old browsers */
+	background: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to)); /* Chrome, Safari4+ */
+	background: -moz-linear-gradient(top, @from, @to); /* FF3.6+ */
+	background: -webkit-linear-gradient(top, @from, @to); /* Chrome10+, Safari5.1+ */
+	background: -o-linear-gradient(top, @from, @to); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, @from, @to); /* IE10+ */
 	filter: formatstring("progid:DXImageTransform.Microsoft.gradient(startColorstr='{0}', endColorstr='{1}')", @from, @to); /* IE6,IE7 */
 	-ms-filter: formatstring("{2}progid:DXImageTransform.Microsoft.gradient(startColorStr='{0}', EndColorStr='{1}'){2}", @from, @to, '"'); /* IE8 */
+	background: linear-gradient(top, @from, @to); /* W3C */
 }
 
 .transition(@range: all, @time: 1s, @ease: ease-in-out)
